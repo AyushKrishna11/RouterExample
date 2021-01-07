@@ -9,7 +9,17 @@ export class Game1Component implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    console.log("window history -> ",window.history.state);
   }
+
+  onActivate(event:any){
+    console.log("Game1Component -> onActivate",event);
+  }
+
+  onDeactivate(event:any){
+    console.log("Game1Component -> onDeactivate",event);
+  }
+
 
 }

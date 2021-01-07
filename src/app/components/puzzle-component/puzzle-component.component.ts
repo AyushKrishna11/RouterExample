@@ -9,7 +9,8 @@ export class PuzzleComponentComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    console.log("window history -> ",window.history.state);
   }
 
 }

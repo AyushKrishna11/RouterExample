@@ -1,9 +1,15 @@
-<p>games-components works!</p>
 
+    <div class="row">
+        <div class="col-3" *ngIf="showGamesMenu">
+    <ul class="list-group" >
+        <li class="list-group-item"><a routerLink="game1" (click)="hideGamesMenu()"> Game 1 </a></li>
+        <li class="list-group-item"><a routerLink="game2" (click)="hideGamesMenu()">Game2</a></li>
+    </ul>
+        </div>
+        <div class="col-3"> 
+            <router-outlet (activate)="onActivate($event)"
+            (deactivate)="onDeactivate($event)"></router-outlet>
+        </div>
+        
+    </div>
 
-        <a routerLink="game1" (click)="some()"> Game 1 </a>
-        <a routerLink="game2">Game2</a>
-        <!-- <a class="nav-link" [routerLink]="['/game1']">game1-other</a> -->
-        <!-- <a href="/games/game2">Game2</a> -->
-
-<!-- <router-outlet></router-outlet> -->

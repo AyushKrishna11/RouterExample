@@ -9,7 +9,16 @@ export class MainPageComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    console.log("window history -> ",window.history.state);
+  }
+
+  onActivate(event:any){
+    console.log("MainPageComponent -> onActivate",event);
+  }
+
+  onDeactivate(event:any){
+    console.log("MainPageComponent -> onDeactivate",event);
   }
 
 }

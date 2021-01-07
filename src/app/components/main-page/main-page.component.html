@@ -1,15 +1,16 @@
 <div class="container">
 <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/games']">Games</a>
+      <a class="nav-link" [routerLink]="['/games']" [state]="{ selected: 'games'}">Games</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/puzzle']">Puzzles</a>
+      <a class="nav-link" [routerLink]="['/puzzle']" [state]="{ selected: 'puzzle'}">Puzzles</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link " [routerLink]="['/quiz']">Quiz</a>
+      <a class="nav-link " [routerLink]="['/quiz']" [state]="{ selected: 'quiz'}">Quiz</a>
     </li>
   </ul>
 
-  <router-outlet></router-outlet>
+  <router-outlet (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"></router-outlet>
 </div>
