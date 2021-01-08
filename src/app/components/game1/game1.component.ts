@@ -1,13 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-game1',
   templateUrl: './game1.component.html',
   styleUrls: ['./game1.component.scss']
 })
-export class Game1Component implements OnInit {
+export class GameComponent implements OnInit {
 
-  constructor() { }
+  gameId:any;
+
+  constructor(public router: ActivatedRoute) {
+    this.router.params.subscribe(
+      (params:Params)=>{this.gameId=params['id'];}
+    );
+  }
 
   ngOnInit() {
     console.log("window history -> ",window.history.state);

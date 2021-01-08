@@ -1,1 +1,12 @@
-<p>puzzle-component works!</p>
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['puzzleadd']" > Puzzle Add </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['puzzlechart']" > Puzzle Charts </a>
+        </li>
+      </ul>
+    
+      <router-outlet></router-outlet>
+    </div>

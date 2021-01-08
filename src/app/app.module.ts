@@ -3,26 +3,31 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
-import { GamesComponentsComponent } from './components/games-components/games-components.component';
+import { GamesListComponent } from './components/games-components/games-components.component';
 import { PuzzleComponentComponent } from './components/puzzle-component/puzzle-component.component';
 import { QuizComponentComponent } from './components/quiz-component/quiz-component.component';
-import { Game1Component } from './components/game1/game1.component';
-import { Game2Component } from './components/game2/game2.component';
+import { GameComponent } from './components/game1/game1.component';
+import { PuzzleaddComponent } from './components/puzzleadd/puzzleadd.component';
+import { PuzzlechartsComponent } from './components/puzzlecharts/puzzlecharts.component';
+import { QuizaddComponent } from './components/quizadd/quizadd.component';
+import { QuizchartsComponent } from './components/quizcharts/quizcharts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
-    GamesComponentsComponent,
+    GamesListComponent,
     PuzzleComponentComponent,
     QuizComponentComponent,
-    Game1Component,
-    Game2Component
+    GameComponent,
+    PuzzleaddComponent,
+    PuzzlechartsComponent,
+    QuizaddComponent,
+    QuizchartsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // RouterModule.forRoot(myroutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

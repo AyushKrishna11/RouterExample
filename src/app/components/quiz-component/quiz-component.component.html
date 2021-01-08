@@ -1,1 +1,12 @@
-<p>quiz-component works!</p>
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['quizadd']" > Quiz Add </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['quizchart']" > Quiz Charts </a>
+        </li>
+      </ul>
+    
+      <router-outlet></router-outlet>
+    </div>
